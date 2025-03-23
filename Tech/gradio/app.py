@@ -4,7 +4,7 @@ import json
 
 def process_and_verify(image_passport, image_person):
     results = [{}, {}]  # [passport_result, verify_result]
-    
+
     # Обработка паспорта
     if image_passport:
         try:
@@ -14,7 +14,7 @@ def process_and_verify(image_passport, image_person):
             results[0] = response.json()
         except Exception as e:
             results[0] = {"error": f"Ошибка распознавания: {str(e)}"}
-    
+
     # Верификация личности
     if image_passport and image_person:
         try:
@@ -24,13 +24,13 @@ def process_and_verify(image_passport, image_person):
             results[1] = response.json()
         except Exception as e:
             results[1] = {"error": f"Ошибка верификации: {str(e)}"}
-    
+
     return results
 
 def create_passport_summary(data):
     if "error" in data:
         return gr.HTML(f"<div style='color: red'>{data['error']}</div>")
-    
+
     ocr = data.get("OCR", {})
     return gr.HTML(f"""
     <div style='color: #2ecc71; font-weight: bold'>
@@ -45,13 +45,13 @@ def create_passport_summary(data):
 def create_verification_summary(data):
     if "error" in data:
         return gr.HTML(f"<div style='color: red'>{data['error']}</div>")
-    
+
     verified = data.get("verified", False)
     distance = round(data.get("distance", 0) * 100, 2)
-    
+
     status = "Личность подтверждена ✅" if verified else "Личности не совпадают ❌"
     color = "#2ecc71" if verified else "#e74c3c"
-    
+
     return gr.HTML(f"""
     <div style='color: {color}; font-weight: bold'>
         {status}<br>
@@ -79,9 +79,9 @@ with gr.Blocks(title="Проверка документов") as app:
         ">АэроСтраж AI</h1>
     </div>
     """)
-    
+
     gr.Markdown("## Загрузка документов для проверки")
-    
+
     with gr.Row():
         passport_img = gr.Image(
             label="Фото паспорта",
@@ -93,14 +93,14 @@ with gr.Blocks(title="Проверка документов") as app:
             type="filepath",
             show_label=True
         )
-    
+
     process_btn = gr.Button("Распознать паспорт и верифицировать личность", variant="primary")
-    
+
     with gr.Row():
         with gr.Column():
             passport_header = gr.HTML()
             passport_json = gr.JSON(label="Данные паспорта")
-        
+
         with gr.Column():
             verify_header = gr.HTML()
             verify_json = gr.JSON(label="Результат верификации")
@@ -120,4 +120,4 @@ with gr.Blocks(title="Проверка документов") as app:
     )
 
 if __name__ == "__main__":
-    app.launch(server_port=8003, share=True)
+    app.launch(server_name="0.0.0.0", server_port=8003, share=True)
