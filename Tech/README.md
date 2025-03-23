@@ -87,7 +87,5 @@
 http://s7.markuslons.ru/
 
 Для безопасности данных предлагаем использовать тестовые картинки, находящиеся в папке **pics**:
-
-- fakepass.jpg
-- fakephoto.jpg
-
+- [fakepass.jpg](pics/fakepass.jpg)  
+- [fakephoto.jpg](pics/fakephoto.jpg)
