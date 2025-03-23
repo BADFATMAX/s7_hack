@@ -51,14 +51,14 @@
 
 ## 2. Инструкция по развертыванию
 ### Модуль сравнения лиц:
-```docker build -t face. docker run -p 8000:8000```
+```docker build -t face``` <br> ```docker run -p 8000:8000```
 ### Модуль распознавания текста:
 ##### Переходим в директорию
 ```..russian_docs_ocr/scripts```
 ##### Создаем виртуальное окружение
-```python -m venv myenv```
-```source myenv/bin/activate```
-```pip install -r requirements.txt```
+```python -m venv myenv``` <br>
+```source myenv/bin/activate``` <br>
+```pip install -r requirements.txt``` <br>
 ##### Запускаем скрипт
 ```python3 main.py```
 
@@ -66,8 +66,8 @@
 ##### Переходим в директорию
 ```..gradio```
 ##### Создаём виртуальное окружение
-```python -m venv myenv```
-```source myenv/bin/activate```
+```python -m venv myenv```<br>
+```source myenv/bin/activate```<br>
 ```pip install -r requirements.txt```
 ##### Запускаем скрипт
 ```python3 app.py```
