@@ -10,10 +10,8 @@
 [http://s7.markuslons.ru/](http://s7.markuslons.ru/)
 
 Для безопасности данных предлагаем использовать тестовые картинки, находящиеся в папке `pics`:  
-- [fakepass.jpg](pics/fakepass.jpg)<br>
-![Демонстрация работы системы](pics/fakepass.jpg) 
-- [fakephoto.jpg](pics/fakephoto.jpg) <br>
-![Демонстрация работы системы](pics/fakephoto.jpg) 
+- [fakepass.jpg](pics/fakepass.jpg)
+- [fakephoto.jpg](pics/fakephoto.jpg) 
 
 ## Навигация
 
