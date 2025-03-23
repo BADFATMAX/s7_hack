@@ -9,6 +9,9 @@
 Наше решение вы можете протестировать по ссылке:  
 [http://s7.markuslons.ru/](http://s7.markuslons.ru/)
 
+Ссылка на видеопрезентацию: [Аэропорт "НГУ"](https://drive.google.com/file/d/1ut4_P_edNxvVPZ3QqnOn6kivZu_2HXvz/view?usp=drive_link) <br>
+Демо: [Демонстрация работы](https://drive.google.com/file/d/1PWP7AgfFLCTCx_0zSAtJqtyGUC0mHmLg/view?usp=sharing)
+
 Для безопасности данных предлагаем использовать тестовые картинки, находящиеся в папке `pics`:  
 - [fakepass.jpg](pics/fakepass.jpg)
 - [fakephoto.jpg](pics/fakephoto.jpg) 
